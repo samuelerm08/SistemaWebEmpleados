@@ -1,0 +1,73 @@
+﻿@model IEnumerable<SistemaWebEmpleados.Models.Empleado>
+
+@section SideBar{
+    <h3>Administración de Empleados</h3>
+}
+
+<div id="filter-zone" class="container">
+    @Html.ActionLink("Crear Empleado", "Create", "Empleado", null, new { @class = "btn btn-success" })
+
+    @using (Html.BeginForm("Filter", "Empleado", FormMethod.Get))
+    {
+        <div id="filter">
+            <input type="text" name="text"/>
+            <input type="submit" value="Filtrar" action="" />
+        </div>
+    }
+</div>
+
+<table class="table container">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Id)</th>
+            <th>@Html.DisplayNameFor(model => model.Nombre)</th>
+            <th>@Html.DisplayNameFor(model => model.Apellido)</th>
+            <th>@Html.DisplayNameFor(model => model.DNI)</th>
+            <th>@Html.DisplayNameFor(model => model.Legajo)</th>
+            <th>@Html.DisplayNameFor(model => model.FechaNacimiento)</th>
+            <th>@Html.DisplayNameFor(model => model.Titulo)</th>
+            <th>Operaciones</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Apellido)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.DNI)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Legajo)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaNacimiento)
+                </td>
+
+                <td>
+                    @Html.ActionLink($"{item.Titulo}", "DetailsByTitle", "Empleado", new {title = item.Titulo})
+                </td>
+
+                <td>
+                    @Html.ActionLink("Ver", "Details", "Empleado", new {id = item.Id}, new {@class="btn btn-primary"})
+                    @Html.ActionLink("Borrar", "Delete", "Empleado", new {id = item.Id}, new{@class="btn btn-danger"})
+                    @Html.ActionLink("Editar", "Edit", "Empleado", new {id = item.Id}, new{@class="btn btn-warning"})
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

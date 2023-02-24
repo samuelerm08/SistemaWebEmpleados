@@ -1,0 +1,176 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap');
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+    font-family: IBM Plex Serif, serif;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    font-family: IBM Plex Serif, serif;
+    min-height: 100%;    
+}
+
+body {
+    display: grid;
+    font-family: IBM Plex Serif, serif;
+    margin-bottom: 60px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}
+
+#sistemaEmpleado {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+}
+
+    #sistemaEmpleado h1 {
+        margin-right: 2%;
+    }
+
+#sideBar {
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}   
+
+#imgBienvenida {
+    width: 25px;
+}
+
+#navBar {
+    margin: 0;
+}
+
+#navbar-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    background-color: lightgray;
+    box-shadow: 0px 10px 20px 0px #00000059;
+    margin: 0;
+    padding: 0;
+}
+
+div main{
+    margin-top: 2%;
+}
+
+.border-top {
+    color: black;
+    background: lightgray;
+    text-align: center;
+}
+
+footer .container {
+    color: black;
+    width: 100%;
+}
+
+#home {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#filter {
+    margin: 15px;
+}
+
+.btn {
+    margin: 2px;
+}
+
+.h3, h3 {
+    font-size: 1.75rem;
+    margin-left: 1rem;
+}
+
+div#filter-zone {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}

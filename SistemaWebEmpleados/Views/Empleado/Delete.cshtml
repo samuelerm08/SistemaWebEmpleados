@@ -1,0 +1,17 @@
+﻿@model SistemaWebEmpleados.Models.Empleado
+
+<div class="container">
+    <h2>
+        Empleado: @Model.Nombre
+    </h2>
+
+    <p>
+        ¿Desea eliminar este empleado?
+    </p>
+
+    @using (Html.BeginForm("Delete", "Empleado", FormMethod.Post))
+    {
+        <input type="submit" class="btn btn-danger" action="Delete" value="Eliminar" />
+        @Html.ActionLink("Volver a Index", "Index", "Empleado", null, new {@class = "btn btn-primary"})
+    }
+</div>

@@ -1,0 +1,18 @@
+﻿
+@section SideBar{
+    <h3>
+        Bienvenido!
+        <img id="imgBienvenida" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/1200px-Smiley.svg.png" />
+    </h3>
+}
+
+<div id="home">
+    <div>
+        <h2>@ViewBag.Bienvenida</h2>
+        @Html.ActionLink("Ir a empleados", "Index", "Empleado")
+    </div>
+
+    <div>
+        <h2><span>Fecha: </span>@ViewBag.Fecha</h2>
+    </div>
+</div>
